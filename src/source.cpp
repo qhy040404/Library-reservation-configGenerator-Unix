@@ -219,7 +219,7 @@ int main()
 	out.close();
 	system("clear");
 	cout << "配置文件生成完毕！" << endl;
-	cout << "程序将于三秒后关闭";
+	cout << "程序将于三秒后关闭，请重启主程序";
 	system("sleep 3");
 	return 0;
 }
