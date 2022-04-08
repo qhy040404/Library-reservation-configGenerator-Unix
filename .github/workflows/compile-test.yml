@@ -1,0 +1,30 @@
+name: Compile-Test-CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  
+jobs:
+  Compile-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build
+      uses: qhy040404@BuildMySource@v2
+      with:
+        language: c++
+        source: source
+
+  Compile-macos:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build
+      run: |
+        cd src
+        g++-9 -o test.o source.cpp
