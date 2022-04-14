@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <fstream>
 #include <string>
+#include "../header/detectOS.hpp"
+#include "../header/TaskSchedule.hpp"
 
 using namespace std;
 
@@ -62,6 +64,8 @@ int main()
 	//初始化其他变量
 	const string validateLX("令希");
 	const string validateBC("伯川");
+	const string Linux("Linux");
+	const string Apple("Apple");
 	int val1, val2;
 	bool success = false;
 	bool multi = true;
@@ -219,7 +223,37 @@ int main()
 	out.close();
 	system("clear");
 	cout << "配置文件生成完毕！" << endl;
-	cout << "程序将于三秒后关闭，请重启主程序";
+	while (1)
+	{
+		cout << "是否需要生成自动任务（计划任务）Y/N" << endl;
+		char TskC;
+		cin >> TskC;
+		if (TskC == 'y' || TskC == 'Y')
+		{
+			if (OSType().compare(Linux) == 0)
+			{
+				AddTaskForLinux();
+			}
+			else if (OSType().compare(Apple) == 0)
+			{
+				AddTaskForMac();
+			}
+			else
+			{
+				cout << "错误：未知的操作系统" << endl;
+			}
+			break;
+		}
+		else if (TskC == 'n' || TskC == 'N')
+		{
+			break;
+		}
+		else
+		{
+			cout << "输入错误" << endl;
+		}
+	}
+	cout << endl << "程序将于三秒后关闭，请重启主程序";
 	system("sleep 3");
 	return 0;
 }

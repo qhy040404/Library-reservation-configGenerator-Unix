@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Label</key>
+		<string>com.qhy040404.library</string>
+		<key>ProgramArguments</key>
+		<array>
+			<!-- 请将下面string中间的字段改为main程序所在路径，如/Users/a/Library-osx/main -->
+			<string>/Users/uniflor/script.sh</string>
+			<!-- 修改上面一行 -->
+		</array>
+		<key>StartCalendarInterval</key>
+		<dict>
+			<key>Minute</key>
+			<integer>30</integer>
+			<key>Hour</key>
+			<integer>6</integer>
+		</dict>
+	</dict>
+</plist>

@@ -141,6 +141,15 @@
   <ItemGroup>
     <ClCompile Include="src\source.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\detectOS.hpp" />
+    <ClInclude Include="header\TaskSchedule.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\com.qhy040404.library.plist">
+      <FileType>XML</FileType>
+    </None>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
