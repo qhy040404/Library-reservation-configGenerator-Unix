@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3.3.0
+    - uses: actions/checkout@v3
 
     - name: Build
-      uses: qhy040404/BuildMySource@v3.0.1
+      uses: qhy040404/BuildMySource@v3
       with:
         language: c++
         source: source
@@ -22,7 +22,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v3.3.0
+    - uses: actions/checkout@v3
 
     - name: Build
       run: |
